@@ -1,0 +1,29 @@
+{
+  "existingEvents": [
+    {
+      "description": "Hockey Practice",
+      "startTime": "2019-09-24T07:00:00.000Z",
+      "endTime": "2019-09-24T08:30:00.000Z"
+    },
+    {
+      "description": "Interview Prep",
+      "startTime": "2019-09-24T09:00:00.000Z",
+      "endTime": "2019-09-24T10:30:00.000Z"
+    },
+    {
+      "description": "Doctor",
+      "startTime": "2019-09-24T13:00:00.000Z",
+      "endTime": "2019-09-24T14:30:00.000Z"
+    },
+    {
+      "description": "Dentist",
+      "startTime": "2019-09-24T14:00:00.000Z",
+      "endTime": "2019-09-24T14:30:00.000Z"
+    },
+    {
+      "description": "Blue Jays Game",
+      "startTime": "2019-09-24T19:00:00.000Z",
+      "endTime": "2019-09-24T22:30:00.000Z"
+    }
+  ]
+}
