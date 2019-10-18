@@ -3,5 +3,11 @@
   "repository": "None",
   "readme": "README.md",
   "license": "None",
-  "dependencies": {}
+  "dependencies": {
+    "mocha": "^6.2.1",
+    "chai": "4.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  }
 }

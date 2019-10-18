@@ -1,0 +1,2 @@
+var indexFile = require("../index");
+

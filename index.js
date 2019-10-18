@@ -1,8 +1,20 @@
 var fs = require("fs");
+var assert = require("assert");
+
+it("Should return date in MS", function() {
+  assert.equal(convertDateTimeToMS("2019-09-24T07:00:00.000Z"), 1569308400000);
+});
 
 function convertDateTimeToMS(dateTime) {
   return new Date(dateTime).valueOf();
 }
+
+
+it("Should get an event with new start and end time", function() {
+  assert.deepEqual(getEventWithDateTimeInMS({"startTime": "2019-09-24T07:00:00.000Z", "endTime": "2019-09-24T07:00:01.000Z"}), 
+    {"startTime": 1569308400000,"endTime": 1569308401000});
+  
+});
 
 function getEventWithDateTimeInMS(event) {
   return Object.assign({}, event, {
@@ -10,6 +22,14 @@ function getEventWithDateTimeInMS(event) {
     endTime: convertDateTimeToMS(event.endTime)
   });
 }
+
+
+it("Should validate if overlaps", function() {
+  assert.equal(checkIfOverlaps({"startTime": 1569108400000, "endTime": 1569308400000}, 
+                               {"startTime": 1569308400000, "endTime": 1569408400000}), false);
+  assert.equal(checkIfOverlaps({"startTime": 1569108400000, "endTime": 1569308400001}, 
+                               {"startTime": 1569308400000, "endTime": 1569408400000}), true);
+});
 
 function checkIfOverlaps(event1, event2) {
   if (
